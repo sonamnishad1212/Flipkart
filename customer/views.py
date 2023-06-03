@@ -24,7 +24,7 @@ class Getcustomerview(APIView):
       return Response({"message":"Save sucessfully"})
 
 
-class GetAddressview(APIView):
+class GetAddressView(APIView):
 
     def get(self,request):
         instance = CustomerAddress.objects.all()
@@ -35,6 +35,6 @@ class CustomerDetailAddressView(APIView):
 
     def get(self,request,pk):
         instance = Customers.objects.filter(id=pk)
-        serializers = GetCustomerAddressSerializer(instance,many=True)
+        serializers = GetCustomerAddressSerializers(instance,many=True)
         return Response(serializers.data)
         

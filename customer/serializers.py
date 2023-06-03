@@ -21,5 +21,5 @@ class CustomersDetailsAddressSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomerAddress
-        fields = ('first_name','last_name ','  moblie ',' address',' age',' country','dob','city')
+        fields = ('first_name','last_name ','moblie','address',' age',' country','dob','city')
 
